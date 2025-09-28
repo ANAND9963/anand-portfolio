@@ -1,4 +1,5 @@
 import {AnimatedCard} from "@/components/AnimatedCard";
+import Image from "next/image"
 
 export function Projects() {
     const projects = [
@@ -84,9 +85,11 @@ export function Projects() {
                     <div  className="card p-6 lg:flex gap-6">
                         {/* Image */}
                         <div className="flex-shrink-0 lg:w-1/3">
-                            <img
+                            <Image
                                 src={p.image}
                                 alt={p.title}
+                                width={600}   // adjust depending on design
+                                height={400}
                                 className="rounded-xl shadow-md object-cover w-full"
                             />
                         </div>

@@ -1,3 +1,6 @@
+import Image from "next/image"
+
+
 export function Certifications() {
     const certs = [
         {
@@ -30,11 +33,14 @@ export function Certifications() {
                         className="card p-6 flex items-center gap-4 hover:shadow-lg transition"
                     >
                         {c.logo && (
-                            <img
+                            <Image
                                 src={c.logo}
                                 alt={c.title}
+                                width={64}
+                                height={64}
                                 className="w-16 h-16 object-contain"
                             />
+
                         )}
                         <div>
                             <h3 className="font-semibold">{c.title}</h3>

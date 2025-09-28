@@ -1,10 +1,19 @@
 // next.config.ts
 import type { NextConfig } from 'next'
 
-const nextConfig: NextConfig = {
-    experimental: {
-        allowedDevOrigins: ['http://192.168.1.59:3000', 'http://localhost:3000'],
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "leetcard.jacoblin.cool", // your external image domain
+            },
+        ],
     },
 }
+
+module.exports = nextConfig
+
 
 export default nextConfig
